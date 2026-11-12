@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { ArrowUpRight, MapPin } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="overflow-hidden bg-background">
+    <section id="home" className="overflow-hidden bg-background">
       <div className="mx-auto grid max-w-[1440px] items-center gap-10 px-5 py-16 sm:px-8 md:py-5 lg:grid-cols-2 lg:gap-16 lg:px-16">
         {/* Left Content */}
         <div className="max-w-xl" data-reveal>
@@ -40,7 +41,7 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <Link
-              href="/projects"
+              href="/#projects"
               className="inline-flex items-center gap-3 bg-walnut px-6 py-4 text-[10px] font-medium uppercase tracking-widest text-white! transition-colors duration-300 hover:bg-gold hover:text-walnut!"
             >
               Explore Our Work
@@ -48,7 +49,7 @@ export default function Hero() {
             </Link>
 
             <Link
-              href="/contact"
+              href="/#contact"
               className="inline-flex items-center gap-3 border border-walnut/20 px-6 py-4 text-[10px] font-medium uppercase tracking-widest text-walnut transition-colors duration-300 hover:border-gold hover:bg-gold"
             >
               Start Your Project
@@ -72,17 +73,17 @@ export default function Hero() {
 
         {/* Right Image */}
         <div className="relative" data-reveal>
-          <div
-            className="relative aspect-[.5/.5] overflow-hidden bg-beige sm:aspect-[.5/.5] lg:aspect-[.5/.5]"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=720&q=50')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-            role="img"
-            aria-label="Elegant contemporary interior with custom furniture"
-          />
+          <div className="relative aspect-square overflow-hidden bg-beige">
+            <Image
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=720&q=50"
+              alt="Elegant contemporary interior with custom furniture"
+              fill
+              priority
+              fetchPriority="high"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-center"
+            />
+          </div>
 
           {/* Image Label */}
           <div className="absolute bottom-5 left-5 bg-background/95 px-5 py-4 shadow-lg backdrop-blur-sm sm:bottom-8 sm:left-8">

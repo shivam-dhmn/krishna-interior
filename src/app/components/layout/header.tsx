@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -6,11 +5,11 @@ import Link from "next/link";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
-  { name: "Our Work", href: "/projects" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", href: "/#home" },
+  { name: "About", href: "/#about" },
+  { name: "Services", href: "/#services" },
+  { name: "Our Work", href: "/#projects" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function Header() {
@@ -19,9 +18,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 border-border bg-background/95 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 md:px-10 lg:px-16">
-
         {/* Logo */}
-        <Link href="/" className="flex flex-col">
+        <Link href="/#home" className="flex flex-col">
           <span className="font-heading text-2xl leading-none tracking-wide text-walnut">
             KRISHNA
           </span>
@@ -45,7 +43,7 @@ export default function Header() {
 
         {/* Desktop CTA */}
         <Link
-          href="/contact"
+          href="/#contact"
           className="hidden items-center gap-2 bg-walnut px-5 py-3 text-[10px] uppercase tracking-widest !text-white transition-colors hover:bg-gold hover:!text-walnut lg:flex"
         >
           Get a Quote
@@ -81,7 +79,7 @@ export default function Header() {
             ))}
 
             <Link
-              href="/contact"
+              href="/#contact"
               onClick={() => setIsOpen(false)}
               className="mt-2 flex items-center justify-center gap-2 bg-walnut px-5 py-4 text-xs uppercase tracking-widest !text-white"
             >

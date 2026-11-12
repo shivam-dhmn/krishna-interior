@@ -14,10 +14,10 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Krishna Furniture & Interior Works | Ambala",
   description:
-    "Custom furniture, modular kitchens, wardrobes and interior solutions in Ambala, Haryana.",
+    "Custom furniture, modular kitchens, wardrobes and interior work in Ambala. Designed around your space and requirements.",
 };
 
 export default function RootLayout({

@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 
 const navigation = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Our Work", href: "#projects" },
@@ -33,7 +33,7 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <Link href="/" className="inline-block">
+            <Link href="/#home" className="inline-block">
               <h2 className="font-heading text-3xl tracking-wide">
                 KRISHNA
               </h2>
@@ -144,7 +144,7 @@ export default function Footer() {
         <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-7 sm:flex-row sm:items-center sm:justify-between">
 
           <p className="text-[10px] text-[#96887A]">
-            © {new Date().getFullYear()} Krishna Furniture & Interior Works.
+            © 2026 Krishna Furniture & Interior Works.
             All rights reserved.
           </p>
 
